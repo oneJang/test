@@ -8,6 +8,3 @@ jobs:
     steps:
     - name: sourcecode CheckOut
       uses: actions/checkout@v3
-      with:
-        repository: oneJang/test/user-service
-        ref: v3
