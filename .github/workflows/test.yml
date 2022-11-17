@@ -9,7 +9,6 @@ jobs:
     - name: sourcecode CheckOut
       uses: actions/checkout@v3
     - name: go to user-service
-      run: cd user-service/ && pwd $$ ls -al
-    - name: build
-      run: ./gradlew build
+      run: cd user-service/ && pwd && ls -al
+    
 
