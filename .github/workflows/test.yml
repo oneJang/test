@@ -27,7 +27,7 @@ jobs:
     - name: location
       run: pwd
     - name: ls user-service
-      run: cd user-service/ && ls user-service
+      run: cd user-service/ && ls
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v2.3.3
       with:
