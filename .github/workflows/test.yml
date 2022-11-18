@@ -26,6 +26,8 @@ jobs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle-wrapper.jar', '**/gradle-wrapper.properties') }}
     - name: location
       run: pwd
+    - name: ls user-service
+      run: cd user-service/ && ls user-service
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v2.3.3
       with:
