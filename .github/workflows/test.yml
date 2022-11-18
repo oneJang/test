@@ -30,7 +30,7 @@ jobs:
       run: cd user-service/  
     - name: Build
       if: steps.cache.outputs.cache-hit != 'true'
-      run: user-service/gradlew build
+      run: ./gradlew build
     - name: Set-var
       id: set-var
       run: |
