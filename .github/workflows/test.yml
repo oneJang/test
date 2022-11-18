@@ -28,7 +28,6 @@ jobs:
       run: pwd
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v2.3.3
-      run: cd user-service/
       with:
         arguments: build
         build-root-directory: user-service/
