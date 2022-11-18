@@ -27,7 +27,7 @@ jobs:
     - name: location
       run: pwd
     - name: move
-      run: cd /user-service  
+      run: cd user-service/  
     - name: Build
       if: steps.cache.outputs.cache-hit != 'true'
       run: user-service/gradlew build
