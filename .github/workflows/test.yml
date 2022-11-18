@@ -26,9 +26,11 @@ jobs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle-wrapper.jar', '**/gradle-wrapper.properties') }}
     - name: location
       run: pwd
-    - name: Build
-      if: steps.cache.outputs.cache-hit != 'true'
-      run: cd user-service/ && ./gradlew build
+    - name: Build with Gradle
+      uses: gradle/gradle-build-action@v2.3.3
+      with:
+        arguments: build
+        build-root-directory: user-service/
     - name: Set-var
       id: set-var
       run: |
